@@ -3,7 +3,7 @@ package br.com.treinaweb.main;
 import java.util.Scanner;
 
 public class Main {
-
+	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		/*System.out.print("Digite uma mensagem: ");
@@ -20,19 +20,19 @@ public class Main {
 		// Você quer fazer a operação 9 + 2
 		System.out.println(String.format("Você quer fazer a operação %d %c %d", numero1, operacao, numero2));
 		int resultado = 0;
-		if (operacao == '+') {
-			resultado = numero1 + numero2;
-		} else if (operacao == '-') {
-			resultado = numero1 - numero2;
-		} else if (operacao == '*') {
-			resultado = numero1 * numero2;
-		} else if (operacao == '/') {
-			resultado = numero1 / numero2;
-		} else {
-			System.out.println("Operação inválida.");
-		}
+//		if (operacao == '+') {
+//			resultado = numero1 + numero2;
+//		} else if (operacao == '-') {
+//			resultado = numero1 - numero2;
+//		} else if (operacao == '*') {
+//			resultado = numero1 * numero2;
+//		} else if (operacao == '/') {
+//			resultado = numero1 / numero2;
+//		} else {
+//			System.out.println("Operação inválida.");
+//		}
 		System.out.println(String.format("%d %c %d = %d", numero1, operacao, numero2, resultado));
-		scanner.close();
+		scanner.close();		
 	}
 
 }
