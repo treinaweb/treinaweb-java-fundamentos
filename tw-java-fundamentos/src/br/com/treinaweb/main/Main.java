@@ -1,12 +1,18 @@
 package br.com.treinaweb.main;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Digite seu nome: ");
+		String nome = scanner.nextLine();
 		System.out.println("Olá, mundo!");
 		System.out.print("Olá mundo de novo \n");
-		System.out.print("Olá mundo mais uma vez");
+		System.out.println("Olá mundo mais uma vez");
+		System.out.println(nome);
+		scanner.close();
 	}
 
 }
