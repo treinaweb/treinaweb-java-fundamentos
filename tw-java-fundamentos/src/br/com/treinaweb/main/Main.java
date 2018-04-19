@@ -42,7 +42,16 @@ public class Main {
 			} else if (acao == 2) {
 				System.out.println(" === Histórico ===");
 				System.out.println(String.format("- Você já fez %d operações", historico.size()));
+				for (int i = 0; i < historico.size(); i++) {
+					System.out.println(historico.get(i));
+				}
 			}
+			System.out.println("=== O que você deseja fazer? === ");
+			System.out.println("1. Realizar outra operação matemática");
+			System.out.println("2. Visualizar histórico");
+			System.out.println("0. Sair");
+			System.out.print("Sua opção: ");
+			acao = scanner.nextInt();
 		}
 		scanner.close();
 	}
