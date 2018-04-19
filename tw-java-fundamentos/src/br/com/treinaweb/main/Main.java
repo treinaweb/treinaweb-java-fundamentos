@@ -31,6 +31,22 @@ public class Main {
 //		} else {
 //			System.out.println("Operação inválida.");
 //		}
+		switch (operacao) {
+		case '+':
+			resultado = numero1 + numero2;
+			break;
+		case '-':
+			resultado = numero1 - numero2;
+			break;
+		case '*':
+			resultado = numero1 * numero2;
+			break;
+		case '/':
+			resultado = numero1 / numero2;
+			break;
+		default:
+			System.out.println("Operação inválida");
+		}
 		System.out.println(String.format("%d %c %d = %d", numero1, operacao, numero2, resultado));
 		scanner.close();		
 	}
