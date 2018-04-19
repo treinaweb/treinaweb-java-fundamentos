@@ -42,9 +42,10 @@ public class Main {
 			} else if (acao == 2) {
 				System.out.println(" === Histórico ===");
 				System.out.println(String.format("- Você já fez %d operações", historico.size()));
-				for (int i = 0; i < historico.size(); i++) {
-					System.out.println(historico.get(i));
-				}
+				historico.forEach(itemHistorico -> System.out.println(itemHistorico));
+//				for (int i = 0; i < historico.size(); i++) {
+//					System.out.println(historico.get(i));
+//				}
 			}
 			System.out.println("=== O que você deseja fazer? === ");
 			System.out.println("1. Realizar outra operação matemática");
