@@ -1,5 +1,6 @@
 package br.com.treinaweb.main;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -47,7 +48,10 @@ public class Main {
 		default:
 			System.out.println("Operação inválida");
 		}
-		System.out.println(String.format("%d %c %d = %d", numero1, operacao, numero2, resultado));
+		ArrayList<String> historico = new ArrayList<String>();
+		String entradaHistorico = String.format("%d %c %d = %d", numero1, operacao, numero2, resultado);
+		historico.add(entradaHistorico);
+		System.out.println(entradaHistorico);
 		scanner.close();		
 	}
 
