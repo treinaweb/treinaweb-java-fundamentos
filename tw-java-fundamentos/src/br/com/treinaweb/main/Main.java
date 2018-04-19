@@ -1,6 +1,7 @@
 package br.com.treinaweb.main;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -13,7 +14,16 @@ public class Main {
 			if (acao == 1) {
 				System.out.println(" === Operação matemática ===");
 				System.out.print("Digite o primeiro número: ");
-				int numero1 = scanner.nextInt();
+				int numero1 = 0;
+				try {
+					numero1 = scanner.nextInt();
+				} catch (InputMismatchException e) {
+					System.out.println(String.format("Ocorreu um erro de formato: %s. O primeiro número assumirá o valor 1.", e.getMessage()));
+					scanner.nextLine();
+					numero1 = 1;
+				} catch (Exception e) {
+					System.out.println("Erro desconhecido.");
+				}
 				System.out.print("Digite a operação: ");
 				char operacao = scanner.next().charAt(0);
 				System.out.print("Digite o segundo número: ");
@@ -43,9 +53,6 @@ public class Main {
 				System.out.println(" === Histórico ===");
 				System.out.println(String.format("- Você já fez %d operações", historico.size()));
 				historico.forEach(itemHistorico -> System.out.println(itemHistorico));
-//				for (int i = 0; i < historico.size(); i++) {
-//					System.out.println(historico.get(i));
-//				}
 			}
 			System.out.println("=== O que você deseja fazer? === ");
 			System.out.println("1. Realizar outra operação matemática");
